@@ -5,6 +5,7 @@ export interface Role {
   location: string;
   stack?: string;
   points: string[];
+  learnMoreUrl?: string;
 }
 
 export const experience: Role[] = [

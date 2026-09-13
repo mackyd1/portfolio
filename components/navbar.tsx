@@ -5,9 +5,9 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
 
 const links = [
-  { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
+  { href: "#work", label: "Work" },
+  { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ];
 

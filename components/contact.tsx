@@ -11,9 +11,8 @@ export function Contact() {
         Let&apos;s talk
       </h2>
       <p className="mx-auto mb-8 max-w-lg text-stone-600 dark:text-stone-400">
-        I&apos;m always up for a good project or a chat about one. Whether
-        you&apos;re hiring, want to build something, or just have a question,
-        send it over and I&apos;ll get back to you.
+        I&apos;m open to SWE internships, project collaborations, and fun ideas.
+        Whether you&apos;re hiring or just want to chat, reach out!
       </p>
       <a
         href="mailto:minnadi@uwaterloo.ca"
