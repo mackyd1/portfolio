@@ -1,5 +1,3 @@
-"use client";
-
 import { Section, SectionHeading } from "@/components/section";
 import { skillGroups } from "@/lib/skills";
 
@@ -16,7 +14,7 @@ export function About() {
       <SectionHeading>About</SectionHeading>
 
       <div className="grid gap-10 md:grid-cols-5">
-        <div className="space-y-4 text-stone-600 dark:text-stone-400 md:col-span-3">
+        <div className="space-y-4 text-[15px] leading-relaxed text-ink/80 md:col-span-3">
           <p>
             I&apos;m Macdonald, a Computer Engineering student at the University
             of Waterloo. I got into engineering because I liked taking things
@@ -31,7 +29,7 @@ export function About() {
         </div>
 
         <div className="md:col-span-2">
-          <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
+          <ul className="space-y-2 text-sm text-ink/80">
             {quickFacts.map((fact) => (
               <li key={fact} className="flex gap-2">
                 <span className="mt-0.5 text-accent">▹</span>
@@ -44,14 +42,14 @@ export function About() {
 
       {/* Skills */}
       <div className="mt-14">
-        <h3 className="mb-6 text-lg font-semibold">Skills &amp; tools</h3>
+        <h3 className="mb-6 text-xl font-semibold">Skills &amp; tools</h3>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (
             <div key={group.category}>
-              <h4 className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
+              <h4 className="mb-3 font-mono text-xs font-medium uppercase tracking-widest text-accent">
                 {group.category}
               </h4>
-              <ul className="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
+              <ul className="space-y-1.5 text-sm text-ink/80">
                 {group.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}

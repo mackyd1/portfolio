@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,22 +8,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        bg: "#F7F4EF",
+        ink: "#1A1714",
         accent: {
-          DEFAULT: "#c2653b",
-          hover: "#a4502c",
+          DEFAULT: "#C85A2A",
+          hover: "#A8481F",
         },
+        muted: "#8A8075",
+        warm: "#E8E0D4",
+        card: "#FFFFFF",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-      },
-      keyframes: {
-        "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-      },
-      animation: {
-        "fade-in": "fade-in 0.6s ease-out forwards",
+        sans: ["var(--font-syne)", "system-ui", "sans-serif"],
+        serif: ["var(--font-lora)", "Georgia", "serif"],
+        mono: ["var(--font-dm-mono)", "monospace"],
       },
     },
   },

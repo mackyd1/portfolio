@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
 import { Section, SectionHeading } from "@/components/section";
 import { featuredProjects, smallProjects } from "@/lib/projects";
@@ -8,10 +5,10 @@ import { featuredProjects, smallProjects } from "@/lib/projects";
 function DeepDive({ label, text }: { label: string; text: string }) {
   return (
     <div>
-      <h4 className="mb-1 text-xs font-semibold uppercase tracking-widest text-accent">
+      <h4 className="mb-1 font-mono text-xs font-medium uppercase tracking-widest text-accent">
         {label}
       </h4>
-      <p className="text-sm text-stone-600 dark:text-stone-400">{text}</p>
+      <p className="text-sm leading-relaxed text-ink/75">{text}</p>
     </div>
   );
 }
@@ -22,27 +19,25 @@ export function Work() {
       <SectionHeading>Work</SectionHeading>
 
       {/* Featured projects */}
-      <div className="space-y-16">
-        {featuredProjects.map((project, i) => (
-          <motion.article
+      <div className="space-y-10">
+        {featuredProjects.map((project) => (
+          <article
             key={project.title}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, delay: i * 0.05 }}
-            className="rounded-2xl border border-stone-200 bg-white/60 p-6 dark:border-stone-800 dark:bg-stone-900/50 sm:p-8"
+            className="rounded-2xl border border-ink/10 bg-card p-6 sm:p-8"
           >
             {project.role && (
-              <p className="mb-1 font-mono text-xs uppercase tracking-widest text-stone-500 dark:text-stone-400">
+              <p className="mb-2 font-mono text-xs uppercase tracking-widest text-muted">
                 {project.role}
               </p>
             )}
-            <h3 className="text-2xl font-bold tracking-tight">{project.title}</h3>
+            <h3 className="text-2xl font-bold tracking-tight">
+              {project.title}
+            </h3>
             <p className="mt-1 text-base font-medium text-accent">
               {project.tagline}
             </p>
 
-            <p className="mt-4 max-w-3xl text-sm text-stone-600 dark:text-stone-400">
+            <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink/80">
               {project.description}
             </p>
 
@@ -56,7 +51,7 @@ export function Work() {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-stone-100 px-2.5 py-1 font-mono text-xs text-stone-600 dark:bg-stone-800 dark:text-stone-400"
+                  className="rounded-full bg-warm px-2.5 py-1 font-mono text-xs text-ink/70"
                 >
                   {tag}
                 </span>
@@ -81,7 +76,7 @@ export function Work() {
                     href={project.repoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-stone-600 transition-colors hover:text-accent dark:text-stone-400"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-ink/70 transition-colors hover:text-accent"
                   >
                     <Github size={16} />
                     View on GitHub
@@ -89,33 +84,29 @@ export function Work() {
                 )}
               </div>
             )}
-          </motion.article>
+          </article>
         ))}
       </div>
 
       {/* Small projects grid */}
       {smallProjects.length > 0 && (
         <>
-          <h3 className="mb-6 mt-16 text-lg font-semibold text-stone-500 dark:text-stone-400">
+          <h3 className="mb-6 mt-14 font-mono text-sm uppercase tracking-widest text-muted">
             Other things I&apos;ve built
           </h3>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {smallProjects.map((project, i) => (
-              <motion.article
+            {smallProjects.map((project) => (
+              <article
                 key={project.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="group flex flex-col rounded-xl border border-stone-200 bg-white/60 p-5 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg dark:border-stone-800 dark:bg-stone-900/50"
+                className="group flex flex-col rounded-xl border border-ink/10 bg-card p-5 transition-colors hover:border-accent"
               >
-                <p className="mb-1 font-mono text-xs text-stone-500 dark:text-stone-400">
+                <p className="mb-1 font-mono text-xs text-muted">
                   {project.year}
                 </p>
                 <h4 className="text-base font-semibold group-hover:text-accent">
                   {project.title}
                 </h4>
-                <p className="mt-2 flex-grow text-sm text-stone-600 dark:text-stone-400">
+                <p className="mt-2 flex-grow text-sm leading-relaxed text-ink/75">
                   {project.description}
                 </p>
                 <div className="mt-4 flex items-center gap-4">
@@ -136,13 +127,13 @@ export function Work() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${project.title} on GitHub`}
-                      className="text-stone-500 transition-colors hover:text-accent dark:text-stone-400"
+                      className="text-muted transition-colors hover:text-accent"
                     >
                       <Github size={16} />
                     </a>
                   )}
                 </div>
-              </motion.article>
+              </article>
             ))}
           </div>
         </>

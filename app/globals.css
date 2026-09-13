@@ -7,7 +7,14 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-stone-50 text-stone-800 dark:bg-stone-950 dark:text-stone-200 antialiased;
+    @apply bg-bg font-serif text-ink antialiased;
+  }
+  /* Headings use the Syne sans face */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-sans;
   }
 }
 
@@ -15,7 +22,7 @@
   .container-page {
     @apply mx-auto w-full max-w-5xl px-6;
   }
-  .text-gradient {
-    @apply bg-gradient-to-r from-orange-700 to-amber-500 bg-clip-text text-transparent;
+  .text-accent-warm {
+    color: #c85a2a;
   }
 }

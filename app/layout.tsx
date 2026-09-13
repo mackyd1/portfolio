@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Syne, Lora, DM_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["500", "600", "700", "800"],
+});
+const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  variable: "--font-dm-mono",
+  weight: ["400", "500"],
+});
 
 export const metadata: Metadata = {
   title: "Macdonald Nnadi | Software Engineer",
@@ -34,13 +43,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans`}>
-        <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
+    <html lang="en">
+      <body
+        className={`${syne.variable} ${lora.variable} ${dmMono.variable} font-serif`}
+      >
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
