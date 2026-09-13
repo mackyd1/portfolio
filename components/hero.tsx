@@ -70,11 +70,11 @@ export function Hero() {
         <div className="md:col-span-2">
           <div className="relative mx-auto aspect-[4/5] w-64 max-w-full md:w-full">
             <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-2xl border-2 border-accent" />
-            {/* Swap the div below for a real photo:
-                <img src="/photo.jpg" alt="Macdonald Nnadi" className="absolute inset-0 h-full w-full rounded-2xl object-cover" /> */}
-            <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-warm text-6xl font-bold text-accent">
-              MN
-            </div>
+            <img
+              src="/photo.jpg"
+              alt="Macdonald Nnadi"
+              className="absolute inset-0 h-full w-full rounded-2xl object-cover object-[center_35%]"
+            />
           </div>
         </div>
       </div>
