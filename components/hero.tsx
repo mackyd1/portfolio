@@ -19,8 +19,8 @@ export function Hero() {
             I&apos;m a Computer Engineering student at the University of Waterloo
             with a good chunk of co-op experience under my belt. I like building
             reliable software, from healthcare APIs to real-time systems, and
-            I&apos;m always tinkering with something new on the side. Incoming
-            SWE Intern at TD.
+            I&apos;m always tinkering with something new on the side. Currently
+            a SWE Intern at TD.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">

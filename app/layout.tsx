@@ -19,7 +19,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: "Macdonald Nnadi | Software Engineer",
   description:
-    "Computer Engineering student at the University of Waterloo and software engineer building reliable full-stack systems, healthcare platforms, and developer tooling. Incoming SWE Intern at TD.",
+    "Computer Engineering student at the University of Waterloo and software engineer building reliable full-stack systems, healthcare platforms, and developer tooling. Currently a SWE Intern at TD.",
   keywords: [
     "Macdonald Nnadi",
     "software engineer",

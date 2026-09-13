@@ -11,11 +11,13 @@ export interface Role {
 export const experience: Role[] = [
   {
     company: "TD Bank",
-    role: "Incoming Software Engineer Intern",
+    role: "Software Engineer Intern",
     period: "Sep 2026 – Dec 2026",
     location: "Toronto, ON",
+    stack: "Java · Python · Cloud Infrastructure",
     points: [
-      "Joining the Financial Services group as a software engineer intern.",
+      "Contributing to the virtualization and containerization of core banking services used by 95% of TD's internal dev teams, improving deployment consistency and reducing infrastructure overhead.",
+      "Supporting software delivery pipelines across enterprise platform teams to streamline service deployment and cross-team integration.",
     ],
   },
   {

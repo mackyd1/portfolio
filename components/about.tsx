@@ -4,7 +4,7 @@ import { skillGroups } from "@/lib/skills";
 const quickFacts = [
   "Based in Waterloo, ON",
   "Computer Engineering @ University of Waterloo (2027)",
-  "Incoming SWE Intern at TD",
+  "Currently a SWE Intern at TD",
   "Into sports, chess, and side projects",
 ];
 
