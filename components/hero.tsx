@@ -70,11 +70,13 @@ export function Hero() {
         <div className="md:col-span-2">
           <div className="relative mx-auto aspect-[4/5] w-64 max-w-full md:w-full">
             <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-2xl border-2 border-accent" />
-            <img
-              src="/photo.jpg"
-              alt="Macdonald Nnadi"
-              className="absolute inset-0 h-full w-full rounded-2xl object-cover object-[center_35%]"
-            />
+            <div className="absolute inset-0 overflow-hidden rounded-2xl">
+              <img
+                src="/photo.jpg"
+                alt="Macdonald Nnadi"
+                className="h-full w-full origin-[50%_40%] scale-[1.7] object-cover object-[50%_40%]"
+              />
+            </div>
           </div>
         </div>
       </div>
